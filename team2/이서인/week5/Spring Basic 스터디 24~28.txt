@@ -1,0 +1,17 @@
+Spring Basic 스터디 24~28
+
+프로젝트: 상품 조회/등록 api 프로젝트
+
+클래스 구조(= 역할 부여)
+Spring MVC 
+M-Model: 데이터 연산, 로직(DB소통=Repository),(로직=Service 상세역할)
+V- View: 화면
+C-Controller: View(사용자)-Model 중간 매개체
+
+요청: 화면(View)-> Controller-> Model
+응답: 화면(View)-< Controller-< Model
+
+어노테이션의 역할: 알려주기
+1. 컴파일러에게
+2. 빌드도구에게
+3. 프레임워크에게
