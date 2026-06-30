@@ -1,0 +1,28 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
+
+@Controller
+@ResponseBody
+class ProductController {
+    //상품 조회, 상품 등록 담당
+
+    @Autowired // 관리하는 객체 중 이 객체 있으면 넣어달라는
+    private ProductService  productService;
+
+    ProductController(){
+        System.out.println("확인");
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public String getProduct(){
+        return productService.getProduct();
+    }
+
+}
